@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import logo from '/lovable-uploads/a17e1d23-ce76-40ba-85c4-092641b4a1d9.png';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/a17e1d23-ce76-40ba-85c4-092641b4a1d9.png" alt="Jardinejando Logo" className="h-16 object-fill" />
+            <img src={logo} alt="Jardinejando Logo" className="h-16 object-fill" />
             
           </a>
 

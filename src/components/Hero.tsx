@@ -6,11 +6,11 @@ import { useRef } from "react"; // Removido useEffect
 const Hero = () => {
   // Atualizando para incluir todas as imagens solicitadas
   const gardenImages = [
-    "/lovable-uploads/de5d3ebc-54e1-414c-9625-fa22978501cd.png", 
-    "/lovable-uploads/4cc5e5df-8d46-46d4-8fa1-2fd5de67417c.png",
-    "/lovable-uploads/foto_3.png",
-    "/lovable-uploads/foto_4.png",
-    "/lovable-uploads/foto_7.png"
+    `${import.meta.env.BASE_URL}lovable-uploads/de5d3ebc-54e1-414c-9625-fa22978501cd.png`,
+    `${import.meta.env.BASE_URL}lovable-uploads/4cc5e5df-8d46-46d4-8fa1-2fd5de67417c.png`,
+    `${import.meta.env.BASE_URL}lovable-uploads/foto_3.png`,
+    `${import.meta.env.BASE_URL}lovable-uploads/foto_4.png`,
+    `${import.meta.env.BASE_URL}lovable-uploads/foto_7.png`
   ];
   
   // Removido apiRef e useEffect para usar o plugin Autoplay
@@ -58,7 +58,7 @@ const Hero = () => {
                 <CarouselContent>
                   {gardenImages.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="h-full w-full">
+                      <div className="h-[400px] w-full">
                         <img 
                           src={image} 
                           alt={`Serviços de jardinagem ${index + 1}`} 

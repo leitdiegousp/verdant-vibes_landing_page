@@ -4,8 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: '/verdant-vibes-website/', // Add this line for GitHub Pages subdirectory
+export default defineConfig(({ command, mode }) => ({
+  base: command === 'build' ? '/verdant-vibes_landing_page/' : '/',
   server: {
     host: "::",
     port: 8080,
